@@ -4,16 +4,10 @@
 #include<cmath>
 #include<algorithm>
 #include<iostream>
-#define MaxSize 100
-#define ElemType int
-#define Status int
+#include "SequenceList.hpp"
+
 using namespace std;
-//顺序表数据结构
-typedef struct
-{
-    ElemType data[MaxSize];//顺序表元素
-    int length;            //顺序表当前长度
-}SqList;
+
 //***************************基本操作函数*******************************//
 //初始化顺序表函数，构造一个空的顺序表 
 Status InitList(SqList& L)
