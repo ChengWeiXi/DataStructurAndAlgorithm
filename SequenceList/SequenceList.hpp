@@ -1,7 +1,7 @@
 /*************************************************
-    * Project : sequence_list(数据结构 - 顺序表)
-    * Date:    2021/10/27  添加Reverse   添加ClearList
-    * Author:  Hu 
+ **** Project : sequence_list(数据结构 - 顺序表)
+ **** Date:     2021/10/27  添加Reverse   添加ClearList
+ **** Author:   Hu 
 ************************************************/
 
 #ifndef _SEQUENCE_LIST
