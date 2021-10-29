@@ -9,6 +9,7 @@
 using namespace std;
 
 //***************************基本操作函数*******************************//
+
 //初始化顺序表函数，构造一个空的顺序表 
 Status InitList(SqList& L)
 {
@@ -16,6 +17,7 @@ Status InitList(SqList& L)
     L.length = 0;                //初始化长度为0
     return 0;
 }
+
 //创建顺序表函数 初始化前n个数据
 bool CreateList(SqList& L, int n)
 {
@@ -27,6 +29,7 @@ bool CreateList(SqList& L, int n)
     }
     return true;
 }
+
 //插入函数 位置i插入数据 i及之后元素后移  1=<i<=length+1 
 bool InsertList(SqList& L, int i, ElemType e)
 {
@@ -48,6 +51,7 @@ bool InsertList(SqList& L, int i, ElemType e)
     L.length++;
     return true;
 }
+
 //删除函数 删除位置i的元素 i之后的元素依次前移
 bool  ListDelete(SqList& L, int i)
 {
@@ -63,6 +67,7 @@ bool  ListDelete(SqList& L, int i)
     L.length--;
     return true;
 }
+
 //查找函数 按位置从小到大查找第一个值等于e的元素 并返回位置
 int LocateElem(SqList L, ElemType e)
 {
@@ -73,6 +78,7 @@ int LocateElem(SqList L, ElemType e)
     }
     return 0;
 }
+
 //倒置函数 将原顺序表直接倒置
 void Reverse(SqList& L)
 {
@@ -84,6 +90,7 @@ void Reverse(SqList& L)
             L.data[L.length - 1 - i] = t;
         }
 }
+
 //奇偶分开并排序
 void SplitSort(SqList& L)
 {
@@ -123,10 +130,12 @@ void SplitSort(SqList& L)
     sort(L.data, L.data + Even + 1);
     sort(L.data + Odd, L.data + L.length);
 }
+
 //清空顺序表
 void ClearList(SqList& L) {
     L.length = 0;
 }
+
 //********************************功能函数*****************************************//
 //输出功能函数 按位置从小到大输出顺序表所有元素
 void PrintList(SqList L)
