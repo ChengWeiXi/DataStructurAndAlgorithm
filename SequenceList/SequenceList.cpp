@@ -1,10 +1,14 @@
+#define _CRT_SECURE_NO_DEPRECATE
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1
+
+
 #include<cstdio>
 #include<cstdlib>
 #include<cstring>
 #include<cmath>
 #include<algorithm>
 #include<iostream>
-#include "SequenceList.hpp"
+#include "./SequenceList.hpp"
 
 using namespace std;
 
@@ -13,7 +17,7 @@ using namespace std;
 //初始化顺序表函数，构造一个空的顺序表 
 Status InitList(SqList& L)
 {
-    memset(L.data, 0, sizeof(L));//初始化数据为0
+    memset(L.data, 0, sizeof(L.data));//初始化数据为0
     L.length = 0;                //初始化长度为0
     return 0;
 }
@@ -24,7 +28,7 @@ bool CreateList(SqList& L, int n)
     if (n<0 || n>MaxSize)false;//n非法
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &L.data[i]);
+        scanf_s("%d", &L.data[i]);
         L.length++;
     }
     return true;
