@@ -14,7 +14,7 @@ using namespace std;
 Status InitList(SqList& L)
 {
     memset(L.data, 0, sizeof(L));//初始化数据为0
-    L.length = 0;                //初始化长度为0
+    L.length = 0;                //初始化长度为01
     return 0;
 }
 
