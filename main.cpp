@@ -25,8 +25,8 @@ int main()
         if (9 == choice) break;
         switch (choice)
         {
-//         case 1:Create(L); break;
-//         case 2:Insert(L); break;
+         case 1:CreateList(L,3); break;
+         case 2:InsertList(L,5,3); break;
 //         case 3:Delete(L); break;
 //         case 4:Search(L); break;
 //         case 5:Reverse(L); break;
