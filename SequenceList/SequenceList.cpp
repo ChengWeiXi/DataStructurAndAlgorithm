@@ -25,7 +25,11 @@ Status InitList(SqList& L)
 //创建顺序表函数 初始化前n个数据
 bool CreateList(SqList& L, int n)
 {
-    if (n<0 || n>MaxSize)false;//n非法
+    if (n<0 || n>MaxSize)
+    {
+        return false;//n非法
+    }
+    
     for (int i = 0; i < n; i++)
     {
         scanf_s("%d", &L.data[i]);
@@ -140,7 +144,7 @@ void ClearList(SqList& L) {
     L.length = 0;
 }
 
-//********************************功能函数*****************************************//
+//********************************功能函数*****************************************// 
 //输出功能函数 按位置从小到大输出顺序表所有元素
 void PrintList(SqList L)
 {
@@ -206,4 +210,14 @@ void Search(SqList L)
     }
     else
         printf("未找到该元素！\n");
+}
+
+//菜单
+void SeqListMenu()
+{
+    printf("********1.创建                        2.插入*********\n");
+    printf("********3.删除                        4.查找*********\n");
+    printf("********5.倒置                        6.分奇偶排序***\n");
+    printf("********7.输出                        8.清空*********\n");
+    printf("********9.退出                              *********\n");
 }

@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SequenceList\SequenceList.cpp" />
+    <ClCompile Include="SingleList\SingleLinkList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SequenceList\SequenceList.hpp" />
+    <ClInclude Include="SingleList\SingleLinkList.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

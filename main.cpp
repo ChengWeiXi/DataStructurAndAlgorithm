@@ -4,36 +4,29 @@
 
 #include <stdio.h>
 #include "SequenceList/SequenceList.hpp"
+
 //≤Àµ•
-void menu()
-{
-    printf("********1.¥¥Ω®                        2.≤Â»Î*********\n");
-    printf("********3.…æ≥˝                        4.≤È’“*********\n");
-    printf("********5.µπ÷√                        6.∑÷∆Ê≈º≈≈–Ú***\n");
-    printf("********7. ‰≥ˆ                        8.«Âø’*********\n");
-    printf("********9.ÕÀ≥ˆ                              *********\n");
-}
 int main()
 {
     SqList L; int choice;
     InitList(L);
     while (1)
     {
-        menu();
+        SeqListMenu();
         printf("«Î ‰»Î≤Àµ•–Ú∫≈£∫\n");
         scanf("%d", &choice);
         if (9 == choice) break;
         switch (choice)
         {
-         case 1:CreateList(L,3); break;
-         case 2:InsertList(L,5,3); break;
-//         case 3:Delete(L); break;
-//         case 4:Search(L); break;
-//         case 5:Reverse(L); break;
-//         case 6:SplitSort(L); break;
-//         case 7:PrintList(L); break;
-//         case 8:ClearList(L); break;
-        default:printf(" ‰»Î¥ÌŒÛ£°£°£°\n");
+//             case 1:Create(L); break;
+//             case 2:Insert(L); break;
+//             case 3:Delete(L); break;
+//             case 4:Search(L); break;
+//             case 5:Reverse(L); break;
+//             case 6:SplitSort(L); break;
+//             case 7:PrintList(L); break;
+//             case 8:ClearList(L); break;
+//             default:printf(" ‰»Î¥ÌŒÛ£°£°£°\n");
         }
     }
     return 0;
