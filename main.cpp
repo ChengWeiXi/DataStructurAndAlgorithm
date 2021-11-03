@@ -25,14 +25,14 @@ int main()
         if (9 == choice) break;
         switch (choice)
         {
-         case 1:CreateList(L,3); break;
-         case 2:InsertList(L,5,3); break;
-//         case 3:Delete(L); break;
-//         case 4:Search(L); break;
-//         case 5:Reverse(L); break;
-//         case 6:SplitSort(L); break;
-//         case 7:PrintList(L); break;
-//         case 8:ClearList(L); break;
+        case 1:Create(L); break;
+        case 2:Insert(L); break;
+        case 3:Delete(L); break;
+        case 4:Search(L); break;
+        case 5:Reverse(L); break;
+        case 6:SplitSort(L); break;
+        case 7:PrintList(L); break;
+        case 8:ClearList(L); break;
         default:printf(" ‰»Î¥ÌŒÛ£°£°£°\n");
         }
     }

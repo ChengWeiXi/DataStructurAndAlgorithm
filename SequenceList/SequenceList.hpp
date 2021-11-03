@@ -7,7 +7,7 @@
 #ifndef _SEQUENCE_LIST
 #define _SEQUENCE_LIST
 
-#define MaxSize 100
+#define MaxSize 10
 #define ElemType int
 #define Status int
 

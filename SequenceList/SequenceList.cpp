@@ -25,7 +25,11 @@ Status InitList(SqList& L)
 //创建顺序表函数 初始化前n个数据
 bool CreateList(SqList& L, int n)
 {
-    if (n<0 || n>MaxSize)false;//n非法
+    if (n<0 || n>MaxSize)
+    {
+        return false;//n非法
+    }
+    
     for (int i = 0; i < n; i++)
     {
         scanf_s("%d", &L.data[i]);
