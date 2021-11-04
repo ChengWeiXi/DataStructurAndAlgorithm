@@ -1,3 +1,16 @@
+/*
+	Project: single linkeed list (数据结构 单链表)
+	Date:    2018/09/14
+	Author:  Frank Yu
+	InitList(LinkList &L) 参数：单链表L 功能：初始化 时间复杂度 O(1)
+	ListLength(LinkList L) 参数：单链表L 功能：获得单链表长度 时间复杂度O(n)
+	ListInsert(LinkList &L,int i,ElemType e) 参数：单链表L,位置i，元素e 功能：位置i后插 时间复杂度O(n)[加入了查找]
+											若已知指针p指向的后插 O(1)
+	ListDelete(LinkList &L,int i) 参数：单链表L，位置i 功能：删除位置i元素 时间复杂度O(n)[加入了查找]
+								  若已知p指针指向的删除 最好是O(1),因为可以与后继结点交换数据域，然后删除后继结点。
+								  最坏是O(n),即从头查找p之前的结点,然后删除p所指结点
+	LocateElem(LinkList L,ElemType e) 参数：单链表L，元素e 功能：查找第一个等于e的元素，返回指针 时间复杂度O(n)
+*/
 #include<cstdio>
 #include<cstdlib>
 #include<cstring>
