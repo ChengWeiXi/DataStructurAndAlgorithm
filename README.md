@@ -5,4 +5,5 @@
 提交的功能测试完成  
 测试同步功能  
 新加单链表源代码  
-用来测试README.md换行的功能
+用来测试README.md换行的功能  
+clone到VS code
