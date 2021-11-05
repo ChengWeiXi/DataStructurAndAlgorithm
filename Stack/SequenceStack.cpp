@@ -1,31 +1,13 @@
-/*
-	Project: sequence_stack (数据结构-顺序栈)
-	Date:    2018/09/14
-	Author:  Frank Yu
-	InitStack(SqStack &s) 参数：顺序栈s 功能：初始化  时间复杂度O(1)
-	Push(SqStack &s,SElemType e) 参数：顺序栈s,元素e 功能：将e入栈 时间复杂度:O(1)
-	Pop(SqStack &s,SElemType &e) 参数：顺序栈s,元素e 功能：出栈,e接收出栈元素值 时间复杂度O(1)
-	GetTop(SqStack s,SElemType &e) 参数：顺序栈s,元素e 功能：得到栈顶元素 时间复杂度O(1)
-	注意：严蔚敏版没有判断栈空函数，在入栈、出栈函数里面判断栈是否空，与王道的不同 尤其是top指针在base之上(有元素时)
-		  另外，严蔚敏版 59页取栈顶有误
 
-*/
 #include<cstdio>
 #include<cstdlib>
 #include<cstring>
 #include<cmath>
 #include<iostream>
+#include"./SequenceStack.hpp"
+
 using namespace std;
-#define Status int
-#define SElemType int
-#define MaxSize 100
-//栈数据结构
-typedef struct Stack
-{
-	SElemType* base;//栈底指针 不变
-	SElemType* top;//栈顶指针 一直在栈顶元素上一个位置
-	int stacksize;//栈可用的最大容量
-}SqStack;
+
 //**************************************基本操作函数************************************//
 //初始化函数
 Status InitStack(SqStack& s)
@@ -62,6 +44,7 @@ bool GetTop(SqStack s, SElemType& e) //严蔚敏版59页有问题，应该用e去获得，函数返
 	return true;
 
 }
+
 //********************************功能实现函数**************************************//
 //菜单
 void menu()
@@ -104,25 +87,4 @@ void GetTopOfStack(SqStack& s)
 	flag = GetTop(s, e);
 	if (flag)printf("栈顶元素为:%d\n", e);
 	else printf("栈已空！！！\n");
-}
-//主函数
-int main()
-{
-	SqStack s; int choice;
-	InitStack(s);
-	while (1)
-	{
-		menu();
-		printf("请输入菜单序号：\n");
-		scanf("%d", &choice);
-		if (choice == 4) break;
-		switch (choice)
-		{
-		case 1:PushToStack(s); break;
-		case 2:PopFromStack(s); break;
-		case 3:GetTopOfStack(s); break;
-		default:printf("输入错误！！！\n");
-		}
-	}
-	return 0;
 }
