@@ -142,11 +142,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SequenceList\SequenceList.cpp" />
     <ClCompile Include="SingleList\SingleLinkList.cpp" />
+    <ClCompile Include="Stack\LinkStack.cpp" />
     <ClCompile Include="Stack\SequenceStack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SequenceList\SequenceList.hpp" />
     <ClInclude Include="SingleList\SingleLinkList.hpp" />
+    <ClInclude Include="Stack\LinkStack.h" />
     <ClInclude Include="Stack\SequenceStack.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
