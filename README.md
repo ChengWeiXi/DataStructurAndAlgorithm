@@ -9,3 +9,5 @@
 7, 用来测试README.md换行的功能  
 8, clone到 Macbook vscode  
 9, 添加顺序栈源代码  
+10,需要添加Makefile预备给VSCode编译工程使用  
+11.修改链栈格式

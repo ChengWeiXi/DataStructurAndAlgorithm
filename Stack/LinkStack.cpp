@@ -1,26 +1,23 @@
-/*
-	Project: single_linked_stack (数据结构 链栈)
-	Date:    2018/09/16
-	Author:  Frank Yu
-	InitStack(LinkStack &S) 参数：链栈S 功能：初始化  时间复杂度O(1)
-	Push(LinkStack &S,SElemType e) 参数：链栈S,元素e 功能：将e入栈 时间复杂度:O(1)
-	Pop(LinkStack &S,SElemType &e) 参数：链栈S,元素e 功能：栈顶出栈,e接收出栈元素值 时间复杂度O(1)
-	GetTop(LinkStack &S,SElemType &e) 参数：链栈S,元素e 功能：得到栈顶元素 时间复杂度O(1)
-*/
+
 #include<cstdio>
 #include<cstdlib>
 #include<cstring>
 #include<cmath>
 #include<iostream>
+#include"LinkStack.h"
+
 using namespace std;
-#define Status int
-#define SElemType int
-//链栈结点数据结构
-typedef struct StackNode
-{
-	SElemType data;//数据域
-	struct StackNode* next;//指针域
-}StackNode, * LinkStack;
+
+// #define Status int
+// #define SElemType int
+// //链栈结点数据结构
+
+// typedef struct StackNode
+// {
+// 	SElemType data;//数据域
+// 	struct StackNode* next;//指针域
+// }StackNode, * LinkStack;
+
 //**************************基本操作函数***************************//
 //初始化函数
 Status InitStack(LinkStack& S)
@@ -97,25 +94,4 @@ void GetTopOfStack(LinkStack S)
 	flag = GetTop(S, e);
 	if (flag)printf("栈顶元素为:%d\n", e);
 	else printf("栈已空！！！\n");
-}
-//主函数
-int main()
-{
-	LinkStack S; int choice;
-	InitStack(S);
-	while (1)
-	{
-		menu();
-		printf("请输入菜单序号：\n");
-		scanf("%d", &choice);
-		if (choice == 4) break;
-		switch (choice)
-		{
-		case 1:PushToStack(S); break;
-		case 2:PopFromStack(S); break;
-		case 3:GetTopOfStack(S); break;
-		default:printf("输入错误！！！\n");
-		}
-	}
-	return 0;
 }

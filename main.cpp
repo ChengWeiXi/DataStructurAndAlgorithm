@@ -1,6 +1,6 @@
-// #define _CRT_SECURE_NO_DEPRECATE
-// 
-// #define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1
+#define _CRT_SECURE_NO_DEPRECATE
+
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1
 // 
 // #include <stdio.h>
 // #include "SequenceList/SequenceList.hpp"
@@ -32,41 +32,21 @@
 //     return 0;
 // }
 
-
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
-void TestreRefenceFun(vector<int*> Pointer,vector<int> Value,vector<int>& Reference)
+#include<stdio.h>
+int main()
 {
-    vector<int*> tmpPointer = Pointer;
-    int*  ptr = tmpPointer.front();
-    *ptr = 23;
-
-    *(Pointer.front()) = 44;
-
-    vector<int> tempValue = Value;
-    Value.push_back(3);
-
-    vector<int> tempRefer = Reference;
-    tempRefer.push_back(89);
-    Reference.push_back(5);
-}
-
-int main(void)
-{
-    int a;
-    vector<int> tempRe(8);
-    vector<int> tempVal(1);
-    vector<int* > temptr;
-
-    temptr.push_back(&a);
-    TestreRefenceFun(temptr, tempVal, tempRe);
-
-    int iSize = tempRe.size();
-    a;
-
-    return 0;
-
+    int a, b;
+    char x;
+    scanf("%d\x20%c%d", &a, &x, &b);
+    if (b != 0) {
+        switch (x) {
+        case '+':printf("%d", a + b); break;
+        case '-':printf("%d", a - b); break;
+        case '*':printf("%d", a * b); break;
+        case '/':printf("%d", a / b); break;
+        case '%':printf("%d", a % b); break;
+        default:printf("ERROR"); break;
+        }
+        return 0;
+    }
 }
